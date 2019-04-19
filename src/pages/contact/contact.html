@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let item of loaditem(); let i = index"> <!--use ngFor for populate list on HTMLm, index is an attribute in Angular, assign variable i to it-->
+      <ion-item>
+ 
+        <h2>{{item.name}}</h2>
+        <p>{{item.quantity}}</p>
+      </ion-item>
+      <ion-item-options>
+        <button  (click) = "editItem(item,i)" ion-button color="primary" icon-start>
+          <ion-icon name="create"></ion-icon>
+          Add
+        </button>
+        <button (click) = "shareItem(item,i)" ion-button color="primary" icon-start> <!--pass variable item and i-->
+          <ion-icon name="share"></ion-icon>
+          Remove
+        </button>
+        <button (click) = "removeItemitem,i)" ion-button color="secondary" icon-start>
+          <ion-icon name="trash"></ion-icon>
+          Edit
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <ion-fab bottom right>
+      <button (click) = "addItem()" ion-fab mini><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

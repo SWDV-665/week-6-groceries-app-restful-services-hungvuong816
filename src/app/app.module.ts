@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import {  NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -11,10 +11,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GroceriesServiceProvider } from '../providers/groceries-service/groceries-service';
-import { SocialSharing, SocialSharingOriginal } from '@ionic-native/social-sharing';
+import { SocialSharingOriginal } from '@ionic-native/social-sharing';
 import {HttpClientModule } from '@angular/common/http';
 import { InputDialogServiceProvider } from '../providers/input-dialog-service/input-dialog-service';
-import { Example2Provider } from '../providers/example2/example2';
 
 
 @NgModule({
@@ -43,9 +42,8 @@ import { Example2Provider } from '../providers/example2/example2';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GroceriesServiceProvider,
-    InputDialogServiceProvider,
-    Example2Provider,
-    SocialSharingOriginal
+    SocialSharingOriginal,
+    InputDialogServiceProvider
   ]
 })
 export class AppModule {}

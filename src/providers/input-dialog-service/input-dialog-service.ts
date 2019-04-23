@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AlertController } from 'ionic-angular';
 import { GroceriesServiceProvider } from '../../providers/groceries-service/groceries-service';
 
-
 @Injectable()
 export class InputDialogServiceProvider{
 
@@ -48,3 +47,4 @@ export class InputDialogServiceProvider{
     }
 
 }
+
